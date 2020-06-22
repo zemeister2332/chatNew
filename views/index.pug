@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  div(ng-controller="indexController")
+    .ui.one.column.stackable.center.aligned.page.grid.margin-30
+      .column.twelve.wide
+        .ui.stacked.segment.gameArea
+          .circle.blue(style='left:150px; top:100px')
+            .relative
+              span.name Asror
+              .message Salom
+          .circle.green(style='left:300px; top:100px')
+            .relative
+              span.name Behruz
+              .message Salom qaleysan :)
+          .circle.red(style='left:350px; top:300px')
+            .relative
+              span.name Shoxnur
+              .message Bu juda qiziqarli!!!!
+        .ui.items.chat
+          .item
+            .content
+              a.header.name Asror
+              .description.message
+                | Salom
+          .item
+            .content
+              a.header.name Behruz
+              .description.message
+                | Salom qaleysan :)
+          .item
+            .content
+              a.header.name Shoxnur
+              .description.message
+                | Bu juda qiziq!!!!
+          .item
+            .content
+              a.header.name Zemeister
+              .description.message
+                | hey
+        .ui.action.input.fluid
+          input(type='text', placeholder='Type here...')
+          button.ui.button Send
