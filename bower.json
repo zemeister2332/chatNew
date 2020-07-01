@@ -9,6 +9,7 @@
   "homepage": "https://github.com/zemeister2332/chatNew",
   "dependencies": {
     "angular": "^1.8.0",
-    "semantic": "^2.4.1"
+    "semantic": "^2.4.1",
+    "jquery": "^3.5.1"
   }
 }

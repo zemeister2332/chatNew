@@ -4,26 +4,24 @@ block content
   div(ng-controller="indexController", ng-init="init()")
     .ui.one.column.stackable.center.aligned.page.grid.margin-30
       .column.twelve.wide
-        .ui.stacked.segment.gameArea
-          .circle.blue(style='left:150px; top:100px')
+        .ui.stacked.segment.gameArea(ng-click="onClickPlayer($event)")
+          .circle.blue(
+            ng-repeat="player in players",
+            ng-style="{ 'left': player.position.x, 'top': player.position.y }",
+            id="{{ player.id }}"
+            )
             .relative
-              span.name Asror
-              .message Salom
-          .circle.green(style='left:300px; top:100px')
-            .relative
-              span.name Behruz
-              .message Salom qaleysan :)
-          .circle.red(style='left:350px; top:300px')
-            .relative
-              span.name Shoxnur
-              .message Bu juda qiziqarli!!!!
+              span.name {{ player.username }}
+              //.message
         .ui.items.chat
           .item(ng-repeat="message in messages")
-            .content(ng-if="!message.type")
+            .content(ng-if="!message.type.code")
               span [SERVER] &nbsp;
               a.header.name {{ message.username }} &nbsp;
-              .description.message
-                | Qo'shildi.
+              .description.message(ng-if="!message.type.message")
+                | OFFLINE.
+              .description.message(ng-if="message.type.message")
+                | ONLINE.
         .ui.action.input.fluid
           input(type='text', placeholder='Type here...')
           button.ui.button Send
