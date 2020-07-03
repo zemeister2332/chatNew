@@ -1,5 +1,5 @@
 body{
-  background-color: #f0f1f6!important;
+  background-image: url("../images/wall1.jpg");
 }
 
 .margin-30{
@@ -36,6 +36,9 @@ body{
 .red {
   background-color: #e74c3c;
 }
+.yellow {
+  background-color: #000;
+}
 
 .circle .relative{
   position: relative;
@@ -61,8 +64,7 @@ body{
   margin-right: 10px!important;
   margin-left: 10px!important;
   height: 90px;
-  -webkit-mask-image: -webkit-gradient(linear, left 60%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
-
+  overflow-y: auto;
 }
 .chat .content{
   text-align: left;
