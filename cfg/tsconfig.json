@@ -1,0 +1,8 @@
+{
+  "development": {
+    "socketUrl": "http://localhost:3000"
+  },
+  "production": {
+    "socketUrl": "https://morning-reef-24190.herokuapp.com/"
+  }
+}
